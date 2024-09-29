@@ -2,12 +2,23 @@
 height: 100vh;
 width: 100vw;
 display: flex;
-flex-wrap: wrap;
+flex-wrap: wrap-reverse;
 justify-content: space-around;
 align-items:end;
 font-family:'Times New Roman', Times, serif;
 background-size:cover;
 }
+
+@media only screen and (max-width: 1150px) {
+    .banner-container{
+       flex-wrap: wrap-reverse;
+    }
+
+    .image-div{
+        margin-top: 50px;
+    }
+}
+
 
 .name{
     text-decoration: none;
