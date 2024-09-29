@@ -11,13 +11,13 @@ import img5 from "../../assets/Theme/theme5.png"
 import img6 from "../../assets/Theme/theme6.png"
 
 const options = [
-  { value: 0, label: 'Black', img: img0},
-  { value: 1, label: '1', img: img1 },
-  { value: 2, label: '2', img: img2},
-  { value: 6, label: '6', img: img3 },
-  { value: 4, label: '4', img: img4 },
-  { value: 5, label: '5', img: img5 },
-  { value: 3, label: '3', img: img6},
+  { value: 0, label: 'Aqua', img: img0},
+  { value: 1, label: 'Voilet', img: img1 },
+  { value: 2, label: 'Blue', img: img2},
+  { value: 6, label: 'magenta', img: img3 },
+  { value: 4, label: 'Red-Voilet', img: img4 },
+  { value: 5, label: 'WHite', img: img5 },
+  { value: 3, label: 'Orange-Yellow', img: img6},
 
 
 ];
