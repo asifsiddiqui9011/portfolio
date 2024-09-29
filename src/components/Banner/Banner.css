@@ -1,0 +1,68 @@
+.banner-container{
+height: 100vh;
+width: 100vw;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items:end;
+font-family:'Times New Roman', Times, serif;
+background-size:cover;
+}
+
+.name{
+    text-decoration: none;
+    font-size: 100px;
+    color: rgb(250, 255, 255);
+    text-shadow: 2px 0px 2px rgba(0,0,0,0.2),2px 0px 2px rgba(0,0,0,0.2),5px 2px 2px rgba(225, 253, 248, 0.8),0px 2px 2px rgba(157, 0, 0, 0.911);
+    border-radius: 15px;
+    
+}
+
+.tag{
+   
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(250, 255, 255);
+    text-shadow: 2px 0px 2px rgba(0,0,0,0.2),2px 0px 2px rgba(0,0,0,0.2),2px 1px 1px rgba(225, 253, 248, 0.8),0px 2px 2px rgba(25, 24, 24, 0.911);
+    border-radius: 15px;
+    
+   
+    
+}
+
+
+
+.banner-div{
+    width: 700px;
+    margin: 50px 0px;
+    text-align: justify;
+    color: white;
+   
+}
+
+.image-div{
+    width: 410px;
+    margin: 50px 0px;
+    text-align: justify;
+    color: white;
+    
+}
+
+.img-container{
+   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%  ; 
+   border-radius: 69% 31% 23% 77% / 76% 69% 31% 24% ;
+   background-image: linear-gradient(rgba(255, 18, 196, 0.934), rgb(176, 15, 225));
+   height: 400px;
+   width: 400px;
+   overflow: hidden;
+   padding: 15px;
+       transform: rotate(-15deg);
+}
+
+.img-container img{
+    height: 450px;
+   
+    transform: rotate(10deg);
+    padding-left: 100px;
+   
+}

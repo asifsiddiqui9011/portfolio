@@ -1,0 +1,37 @@
+.Nav-container{
+    height: 70px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 7;
+}
+
+.nav-btn{
+    height: 40px;
+    padding:0px  5px;
+    border-radius: 50px;
+    border: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+}
+
+#black{
+    /* background-color: rgb(0, 0, 0); */
+    backdrop-filter: blur(10px);
+}
+
+.logo{
+    /* background-color: white; */
+    font-size: 30px;
+    font-weight:bold;
+    height: 30px;
+    padding:0px  5px 10px;
+    border-radius: 50px;
+    color: white
+}

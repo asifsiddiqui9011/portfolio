@@ -1,0 +1,19 @@
+:root{
+    /* background-image: url('./assets/kkkokok.jpg');
+    background-size:auto; */
+    /* background-color: rgb(255, 255, 255); */
+
+
+}
+
+.body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    margin: -10px;
+    position: absolute;
+    /* width:101%; */
+}
+

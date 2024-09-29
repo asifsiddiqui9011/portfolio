@@ -1,0 +1,142 @@
+.skill-container{
+    height: 500px;
+    width: 400px;
+    border-radius: 50%  50% 50% 50% ;
+    box-shadow: 10px 10px 25px 1px  rgb(13, 132, 202), inset 10px 10px 500px 15px  rgb(120, 203, 251,1),inset -10px -10px 50px 15px  rgb(255, 2, 238,0.4);
+    text-align: center;
+    background-color: white;
+    transform: rotate(-320deg);
+    transition: transform,800ms ease-in;
+}
+.skill-container:hover{
+  transform: rotatex(10deg);
+  transform: rotate(3600deg);
+  transition: transform,8000ms ease-in;
+}
+
+
+.cloud{
+    width: 90vw;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    background-color:transparent;
+    border-radius: 15px;
+    background-size:contain;
+
+
+}
+
+.skill-img{
+  height: 100px;
+  width: 100px;
+  border: 3px solid rgb(190, 186, 186);
+  border-radius: 50%;
+  /* position: absolute; */
+  align-items: center;
+  z-index:1;
+  background-color: white;
+}
+
+
+.hexa{
+  height: 240px;
+  width: 140px;
+  background-color:transparent;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: transparent;
+  transition: height,width,color,900ms ease-in-out;
+
+}
+
+.hexa:hover{
+  /* height:433px; */
+  height: 300px;
+  width:250px;
+  border-radius: 15px;
+  background-color: transparent;
+  border: 5px solid white;
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: height,width,color,800ms ease-in-out;
+  .skill-img{
+    z-index: 5;
+  }
+  
+  
+}
+
+
+
+.hexa::before{
+    content: "";
+    height: inherit;
+    width: inherit;
+    background-color:inherit;
+    position: absolute;
+    transform: rotate(120deg);
+    z-index:2;
+    /* border: 5px solid white; */
+  /* border-bottom: 5px solid white; */
+  backdrop-filter: blur(25px);
+}
+
+.hexa::after{
+    content: "";
+    height: inherit;
+    width: inherit;
+    backdrop-filter: blur(25px);
+    background-color:inherit;
+    position: absolute;
+    transform:rotate(60deg);
+    z-index:2;
+    /* border-top: 5px solid white;
+  border-bottom: 5px solid white; */
+  
+    
+}
+
+
+
+.cloud-next{
+    width: 90vw;
+    /* height: 420px; */
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+    border-radius: 15px;
+   
+    padding-top: 195px;
+   
+    
+
+}
+
+.upper{
+  margin-top: -315px;
+}
+.upper:hover{
+  z-index: 7;
+}
+
+.bottom{
+  margin-top: -68px;
+}
+.bottom:hover{
+  z-index: 7;
+}
+
+#skills{
+  text-align: center;
+}
