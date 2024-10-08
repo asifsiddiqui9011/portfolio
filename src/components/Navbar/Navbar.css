@@ -35,3 +35,12 @@
     border-radius: 50px;
     color: white
 }
+
+@media only screen and (max-width: 750px) {
+    .nav-btn{
+      display: none;
+      justify-content: space-between;
+    }
+
+   
+}
