@@ -140,3 +140,11 @@
 #skills{
   text-align: center;
 }
+
+
+@media (max-width:380px) {
+ .heading{
+  margin-bottom: 200px;
+  }
+  
+}

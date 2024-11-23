@@ -26,7 +26,7 @@ const Navbar = (props) => {
  
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const [theme, setTheme] = useState(0);
+  const [theme, setTheme] = useState(4);
 
   const handleThemeChange = (value) => {
     setTheme(value);

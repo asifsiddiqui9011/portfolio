@@ -10,7 +10,7 @@ import img6 from "../../assets/Theme/theme6.png"
 
 const Dropdown = ({ options, selectedValue, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState( options.find((option) => option.value === selectedValue) || options[0]);
+  const [selected, setSelected] = useState( options.find((option) => option.value === selectedValue) || options[4]);
   const dropdownRef = useRef(null);
 
   // Close the dropdown if clicked outside

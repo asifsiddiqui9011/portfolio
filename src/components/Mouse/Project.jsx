@@ -18,7 +18,7 @@ const Project = () => {
       title:"Cinemal Hall",
       desc:"Our cinema hall website offers a seamless and convenient way to browse movies and purchase tickets online. Users can easily view showtimes, select seats, and book tickets for their favorite films. With a user-friendly design and secure payment options, the platform ensures a smooth and hassle-free movie ticket buying experience, accessible on any device",
       github:"https://github.com/asifsiddiqui9011/CinemaHall",
-      demo:""
+      demo:"https://cinema-hall-theta.vercel.app"
     },
     {
       title:"News App",

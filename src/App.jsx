@@ -12,7 +12,7 @@ import { useState } from 'react'
 
 function App() {
  
-  const [thm,setThm]= useState(0)
+  const [thm,setThm]= useState(4)
  const theme = {
       0:{
         backgroundColor: "#ffffff",
