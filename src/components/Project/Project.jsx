@@ -53,7 +53,7 @@ const Project = () => {
   ]
   return (
     <div id="portfolio" style={{textAlign:"center"}}>
-      <h1 className="heading">PROJECTS</h1>
+      <h1 className="heading" style={{marginBottom:"10px"}}>PROJECTS</h1>
         <div className="project-container" >
           {projects.map((data,index)=>{
             return(

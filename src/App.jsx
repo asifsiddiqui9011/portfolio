@@ -6,7 +6,7 @@ import Footer from './components/Footer/Footer'
 import Skill from './components/Skills/Skill'
 import Banner from './components/Banner/Banner'
 import Intro from './components/Intro/Intro'
-import Project from './components/Mouse/Project'
+import Project from './components/Project/Project'
 import { Routes } from 'react-router-dom'
 import { useState } from 'react'
 

@@ -26,46 +26,50 @@ function Hexa(props){
 const Skill = () => {
   return (
     <section id="skills">
-    <h1 className="heading">SKILLS</h1>
-<div className="cloud-next" style={{backgroundImage:`url(${flora})`,backgroundSize:"cover"}} >
-    <div className="upper">
-          <Hexa tag={'Python'} img={python} experience={'Intermediate'} type={'(Programming Language)'} />
-    </div>
-    <div className="bottom">
-        <Hexa tag={'C++'} img={CPP} experience={'Intermediate'} type={'(Programming Language)'} />
-    </div>
-    <div className="upper">
-        <Hexa tag={'MongoDb'} img={mongodb} experience={'Intermediate'} type={'(NoSQL DBMS)'} />
-    </div>
-    <div className="bottom">
-       <Hexa tag={'MySql'} img={mysql} experience={'Intermediate'} type={'(RDBMS)'} />
-    </div>
-    <div className="upper">
-      <Hexa tag={'NodeJS'} img={nodejs} experience={'Intermediate'} type={'(Runtime Environment)'} />
-    </div>
-    <div className="bottom">
-       <Hexa tag={'Express'} img={express} experience={'Intermediate'} type={'(Framework)'} />
-    </div>
-    <div className="upper">
-       <Hexa tag={'ReactJS'} img={reactjs} experience={'Intermediate'} type={'(JavaScript library)'} />
-    </div>
-    <div className="bottom">
-      <Hexa tag={'JavaScript'} img={js} experience={'Intermediate'} type={'(Programming Language)'} />
-    </div>
-    <div className="upper">
-      <Hexa tag={'HTML5'} img={html} experience={'Intermediate'} type={'(Markup Language)'} />
-    </div>
-    <div className="bottom">
-       <Hexa tag={'CSS'} img={css} experience={'Intermediate'} type={'(Style Sheet Language)'} />
-    </div>
-    <div className="upper">
-       <Hexa tag={'BootStrap'} img={bootstrap} experience={'Intermediate'} type={'(Freamework)'} />   
-    </div>
-    <div className="bottom">
-         <Hexa tag={'GitHub'} img={github} experience={'Intermediate'} type={'(Developers Platform)'} />
-    </div>
-    
-</div>
+
+         <h1 className="heading">SKILLS</h1>
+
+         <div className="cloud-next" style={{backgroundImage:`url(${flora})`,backgroundSize:"cover"}} >
+            
+            <div className="upper">
+                  <Hexa tag={'Python'} img={python} experience={'Intermediate'} type={'(Programming Language)'} />
+            </div>
+            <div className="bottom">
+               <Hexa tag={'C++'} img={CPP} experience={'Intermediate'} type={'(Programming Language)'} />
+            </div>
+            <div className="upper">
+               <Hexa tag={'MongoDb'} img={mongodb} experience={'Intermediate'} type={'(NoSQL DBMS)'} />
+            </div>
+            <div className="bottom">
+               <Hexa tag={'MySql'} img={mysql} experience={'Intermediate'} type={'(RDBMS)'} />
+            </div>
+            <div className="upper">
+               <Hexa tag={'NodeJS'} img={nodejs} experience={'Intermediate'} type={'(Runtime Environment)'} />
+            </div>
+            <div className="bottom">
+               <Hexa tag={'Express'} img={express} experience={'Intermediate'} type={'(Framework)'} />
+            </div>
+            <div className="upper">
+               <Hexa tag={'ReactJS'} img={reactjs} experience={'Intermediate'} type={'(JavaScript library)'} />
+            </div>
+            <div className="bottom">
+               <Hexa tag={'JavaScript'} img={js} experience={'Intermediate'} type={'(Programming Language)'} />
+            </div>
+            <div className="upper">
+               <Hexa tag={'HTML5'} img={html} experience={'Intermediate'} type={'(Markup Language)'} />
+            </div>
+            <div className="bottom">
+               <Hexa tag={'CSS'} img={css} experience={'Intermediate'} type={'(Style Sheet Language)'} />
+            </div>
+            <div className="upper">
+               <Hexa tag={'BootStrap'} img={bootstrap} experience={'Intermediate'} type={'(Freamework)'} />   
+            </div>
+            <div className="bottom">
+                  <Hexa tag={'GitHub'} img={github} experience={'Intermediate'} type={'(Developers Platform)'} />
+            </div>
+            
+         </div>
+
     </section>
   )
 }
