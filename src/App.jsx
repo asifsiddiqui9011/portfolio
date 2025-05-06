@@ -10,6 +10,11 @@ import Project from './components/Project/Project'
 import { Routes } from 'react-router-dom'
 import { useState } from 'react'
 
+import backgroundImage from "./assets/p-bg-scrl.png"
+import Float from './components/float/Float'
+import Rotate from './components/float/Rotate'
+import GetInTouch from './components/GetInTouch/GetInTouch'
+
 function App() {
  
   const [thm,setThm]= useState(4)
@@ -70,13 +75,16 @@ const themeHandler = (e)=>{
 
 
   return (
-    <div className='body' style={theme[thm]}>
-      <Navbar theme={themeHandler}/>
-          <Banner/>
-          <Intro/>
-            <Skill/>
-            <Project/>
-      <Footer/>
+    <div className='body' style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <Navbar theme={themeHandler} />
+      <Banner />
+      <Intro />
+      <Skill />
+      <Project />
+      <Float />
+      <Rotate position={{ top: `${Math.random() * 100}vh`, left: `${Math.random() * 100}vw` }} />
+      <GetInTouch/>
+      <Footer />
     </div>
   )
 }

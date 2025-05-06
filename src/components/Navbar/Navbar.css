@@ -9,38 +9,104 @@
     z-index: 7;
 }
 
-.nav-btn{
-    height: 40px;
-    padding:0px  5px;
-    border-radius: 50px;
-    border: none;
+.Nav-container#black {
+    background: #000;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-btn {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 10px;
-    background-color: white;
+    gap: 1rem;
 }
 
-#black{
-    /* background-color: rgb(0, 0, 0); */
-    backdrop-filter: blur(10px);
+.btn-Nav {
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.logo{
-    /* background-color: white; */
-    font-size: 30px;
-    font-weight:bold;
-    height: 30px;
-    padding:0px  5px 10px;
-    border-radius: 50px;
-    color: white
+.btn-Nav {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    z-index: 0;
 }
 
-@media only screen and (max-width: 750px) {
-    .nav-btn{
-      display: none;
-      justify-content: space-between;
-    }
+.btn-Nav::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(162, 0, 255, 0);
+    border: 2px solid transparent;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
 
-   
+.btn-Nav:hover::before {
+    transform: translate(-50%, -50%) scale(1.5);
+    background-color: rgba(162, 0, 255, 0.2);
+    border-color: #f46ee6;
+}
+
+.btn-Nav:hover {
+    color: #d81e7f;
+}
+
+
+.Get-in-touch {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(120, 115, 245, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.Get-in-touch::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.Get-in-touch:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(120, 115, 245, 0.6);
+}
+
+.Get-in-touch:hover::after {
+    opacity: 1;
 }

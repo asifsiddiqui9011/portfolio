@@ -29,7 +29,7 @@ const Skill = () => {
 
          <h1 className="heading">SKILLS</h1>
 
-         <div className="cloud-next" style={{backgroundImage:`url(${flora})`,backgroundSize:"cover"}} >
+         <div className="cloud-next" style={{backgroundSize:"cover"}} >
             
             <div className="upper">
                   <Hexa tag={'Python'} img={python} experience={'Intermediate'} type={'(Programming Language)'} />

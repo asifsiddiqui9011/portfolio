@@ -1,0 +1,101 @@
+/* Cyberpunk luxrious styles for GetInTouch component */
+.get-in-touch {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border-radius: 10px;
+    padding: 2rem;
+    width: 60%; /* Increased container width */
+    margin: 2rem auto;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated glowing border fixed relative to container width */
+.get-in-touch::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 400%;
+    background: conic-gradient(from 0deg, #ff00ff, #00ffff, #ff00ff);
+    transform: translate(-50%, -50%);
+    animation: spin 5s linear infinite;
+    opacity: 0.3;
+}
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Child elements positions */
+.get-in-touch > * {
+    position: relative;
+    z-index: 1;
+}
+
+.get-in-touch h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #ff00ff;
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
+}
+
+.get-in-touch form div {
+    margin-bottom: 1rem;
+}
+
+.get-in-touch label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #00ffff;
+}
+
+.get-in-touch input,
+.get-in-touch textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background: #0f3460;
+    color: #fff;
+    font-size: 1rem;
+    box-shadow: inset 0 0 5px rgba(0, 255, 255, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.get-in-touch input:focus,
+.get-in-touch textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+.get-in-touch button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    color: #1a1a2e;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.get-in-touch button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.8);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .get-in-touch {
+      max-width: 95%;
+      padding: 1rem;
+      margin: 1rem auto;
+  }
+}

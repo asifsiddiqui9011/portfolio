@@ -159,3 +159,33 @@
     border: 3px solid white;
   }
 }
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.cloud-next > .upper {
+  animation: slideInFromTop 0.8s ease-out forwards;
+}
+
+.cloud-next > .bottom {
+  animation: slideInFromBottom 0.8s ease-out forwards;
+}

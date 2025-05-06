@@ -4,7 +4,7 @@ import { FaRegFilePdf } from "react-icons/fa";
 
 const Intro = () => {
   return (
-    <section id="about">
+    <section id="about" >
       <div className="intro-container" >
           <div className="about-container">
             <h1>ABOUT</h1>
@@ -13,7 +13,7 @@ const Intro = () => {
             </p>
           </div>
           <div  className="about-container" >
-            <a href={'../../../public/ee.pdf'} download style={{textDecoration:"none", color:"black" , border:"3px solid white", padding:"20px", textAlign:"center", borderRadius:"15px"}}> <h2>Download Resume</h2> <FaRegFilePdf style={{fontSize:"100px",color:"black"}} />
+            <a href={'../../../public/ee.pdf'} download style={{textDecoration:"none", color:"white" , border:"3px solid white", padding:"20px", textAlign:"center", borderRadius:"15px"}}> <h2>Download Resume</h2> <FaRegFilePdf style={{fontSize:"100px",color:"white"}} />
             </a> 
           </div>
       </div>

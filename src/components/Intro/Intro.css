@@ -5,10 +5,11 @@
   flex-wrap: wrap;
   gap: 2px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.39);
+  background-color: rgba(255, 255, 255, 0.1);
   /* backdrop-filter: blur(20px); */
   border: 5px solid white;
   border-radius: 15px;
+  color: white;
 }
 
 .intro-div{

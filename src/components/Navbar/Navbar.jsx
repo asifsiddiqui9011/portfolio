@@ -56,14 +56,14 @@ const Navbar = (props) => {
       </div>
    
     <div className="nav-btn">
-       <ScrollLink to={'home'}smooth={true} duration={500} offset={-100}><button>Home</button></ScrollLink> 
-       <ScrollLink to={'about'} smooth={true} duration={500} offset={-100}> <button>About</button></ScrollLink> 
-       <ScrollLink to={'skills'} smooth={true} duration={500}offset={-20}><button>Skills</button></ScrollLink> 
-       <ScrollLink to={'portfolio'} smooth={true} duration={500} offset={-35}> <button>Portfolio</button></ScrollLink> 
-       <ScrollLink to={'contact'} smooth={true} duration={500}offset={-100}><button>Cantact</button></ScrollLink> 
+       <ScrollLink to={'home'}smooth={true} duration={1000} offset={-100}><button className="btn-Nav">Home</button></ScrollLink> 
+       <ScrollLink to={'about'} smooth={true} duration={500} offset={-100}> <button className="btn-Nav">About</button></ScrollLink> 
+       <ScrollLink to={'skills'} smooth={true} duration={600}offset={-20}><button className="btn-Nav">Skills</button></ScrollLink> 
+       <ScrollLink to={'portfolio'} smooth={true} duration={700} offset={-35}> <button className="btn-Nav" >Portfolio</button></ScrollLink> 
+       <ScrollLink to={'contact'} smooth={true} duration={1000}offset={-100}><button className="btn-Nav">Cantact</button></ScrollLink> 
     </div>
         <div>
-          <Dropdown options={options} selectedValue={theme} onChange={handleThemeChange} />
+        <ScrollLink to={'contact'} smooth={true} duration={1000}offset={-100}><button className="Get-in-touch">Get In Touch</button></ScrollLink> 
         </div>
     </div>
   )
