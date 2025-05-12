@@ -1,0 +1,57 @@
+/* Base styling for the floating cyberpunk navigation bar */
+.bottom-navbar {
+  position: fixed;
+  bottom: 20px; /* Floating above the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  padding: 10px 0;
+  background: linear-gradient(135deg, rgba(20, 20, 20, 0.9), rgba(40, 40, 40, 0.9));
+  border: 1px solid #00C6FF;
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.7), 0 0 30px rgba(255, 7, 58, 0.7);
+  border-radius: 25px;
+  z-index: 1000;
+}
+
+/* Layout for navigation links */
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Style for individual navigation items */
+.nav-item a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+/* On hover, change the text color to a neon accent */
+.nav-item a:hover {
+  color: #edefff;
+}
+
+/* Subtle neon underline effect on hover */
+.nav-item a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #c80bea;
+  transition: width 0.3s ease;
+}
+
+
+/* Media Query: Hide on devices wider than 768px */
+@media screen and (min-width: 768px) {
+  .bottom-navbar {
+    display: none;
+  }
+}

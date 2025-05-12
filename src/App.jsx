@@ -14,6 +14,7 @@ import backgroundImage from "./assets/p-bg-scrl.png"
 import Float from './components/float/Float'
 import Rotate from './components/float/Rotate'
 import GetInTouch from './components/GetInTouch/GetInTouch'
+import BottomNavbar from './components/BottomNavBAr/BottomNavbar'
 
 function App() {
  
@@ -82,8 +83,9 @@ const themeHandler = (e)=>{
       <Skill />
       <Project />
       <Float />
-      <Rotate position={{ top: `${Math.random() * 100}vh`, left: `${Math.random() * 100}vw` }} />
+     {/* <Rotate position={{ top: `${Math.random() * 100}vh`, left: `${Math.random() * 100}vw` }} /> */}
       <GetInTouch/>
+      <BottomNavbar/>
       <Footer />
     </div>
   )

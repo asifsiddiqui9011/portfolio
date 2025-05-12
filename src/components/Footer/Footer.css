@@ -21,3 +21,10 @@
     align-items: center;
 }
 
+
+@media screen and (max-width: 768px) {
+    .footer-container{
+        height: 60px;
+        margin-bottom: 80px;
+    }
+}

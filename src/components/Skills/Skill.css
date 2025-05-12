@@ -149,14 +149,14 @@
     width: 80px;
   }
   .skill-img{
-    height: 65px;
-    width: 65px;
-    margin-bottom: -80px;
+    height: 45px;
+    width: 45px;
   }
   .hexa:hover{
     height: 204px;
-    width: 170px;
+    width: 150px;
     border: 3px solid white;
+    font-size: small; 
   }
 }
 
@@ -188,4 +188,5 @@
 
 .cloud-next > .bottom {
   animation: slideInFromBottom 0.8s ease-out forwards;
-}
+} 
+

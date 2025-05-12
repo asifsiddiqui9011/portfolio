@@ -117,6 +117,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import imageSrc from '../../assets/pfloat.png';
+import './Float.css'; // Ensure the CSS file is in the same directory
 
 const Float = ({ initialPosition = { x: 100, y: 100 } }) => {
     const [position, setPosition] = useState(initialPosition);
@@ -206,18 +207,61 @@ const Float = ({ initialPosition = { x: 100, y: 100 } }) => {
         }
     };
 
+    const handleTouchStart = (e) => {
+    if (exploded) return;
+    e.preventDefault(); // Stops touch scrolling on mobile
+    setIsDragging(true);
+    setOffset({
+        x: e.touches[0].clientX - position.x,
+        y: e.touches[0].clientY - position.y,
+    });
+};
+
+const handleTouchMove = (e) => {
+    if (!isDragging) return;
+    setPosition({
+        x: e.touches[0].clientX - offset.x,
+        y: e.touches[0].clientY - offset.y,
+    });
+};
+
+const handleTouchEnd = () => {
+    setIsDragging(false);
+    clearTimers();
+};
+
+// Utility function to clear timers
+const clearTimers = () => {
+    if (dragTimerRef.current) {
+        clearTimeout(dragTimerRef.current);
+        dragTimerRef.current = null;
+    }
+    if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+        if (!exploded) setScale(1);
+    }
+};
+
+
     // Manage dragging event listeners
     useEffect(() => {
         if (isDragging) {
             window.addEventListener('mousemove', handleMouseMove);
             window.addEventListener('mouseup', handleMouseUp);
+            window.addEventListener('touchmove', handleTouchMove); // Mobile equivalent
+            window.addEventListener('touchend', handleTouchEnd);  
         } else {
             window.removeEventListener('mousemove', handleMouseMove);
             window.removeEventListener('mouseup', handleMouseUp);
+           window.addEventListener('touchmove', handleTouchMove); // Mobile equivalent
+            window.addEventListener('touchend', handleTouchEnd);   
         }
         return () => {
             window.removeEventListener('mousemove', handleMouseMove);
             window.removeEventListener('mouseup', handleMouseUp);
+           window.addEventListener('touchmove', handleTouchMove); // Mobile equivalent
+            window.addEventListener('touchend', handleTouchEnd);    
         };
     }, [isDragging, offset, exploded]);
 
@@ -252,6 +296,8 @@ const Float = ({ initialPosition = { x: 100, y: 100 } }) => {
             return () => cancelAnimationFrame(animationFrameId);
         }
     }, [isDragging, position]);
+
+
 
     // Animate mini floating objects
     useEffect(() => {
@@ -299,7 +345,7 @@ const Float = ({ initialPosition = { x: 100, y: 100 } }) => {
     return (
         <>
             {!exploded && (
-                <div ref={containerRef} style={containerStyle} onMouseDown={handleMouseDown}>
+                <div ref={containerRef} style={containerStyle} onMouseDown={handleMouseDown} onTouchStart={handleTouchStart}>
                     <img
                         src={imageSrc}
                         alt="Floating Object"
