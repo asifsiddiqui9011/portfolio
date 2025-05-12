@@ -215,6 +215,51 @@ const Float = ({ initialPosition = { x: 100, y: 100 } }) => {
         x: e.touches[0].clientX - position.x,
         y: e.touches[0].clientY - position.y,
     });
+
+    // Start timer: after 500ms of dragging, begin increasing size
+        dragTimerRef.current = setTimeout(() => {
+            intervalRef.current = setInterval(() => {
+                setScale((prevScale) => {
+                    let newScale = prevScale + 0.01;
+                    if (newScale >= 2) {
+                        newScale = 2;
+                        if (intervalRef.current) {
+                            clearInterval(intervalRef.current);
+                            intervalRef.current = null;
+                        }
+                        // Generate explosion fragments (8 parts)
+                        const parts = Array.from({ length: 8 }, (_, i) => {
+                            const angle = (i * (360 / 8)) + (Math.random() * 20 - 10);
+                            const rad = angle * (Math.PI / 180);
+                            return {
+                                offsetX: Math.cos(rad) * 100,
+                                offsetY: Math.sin(rad) * 100,
+                            };
+                        });
+                        setExplosionData(parts);
+                        setExploded(true);
+                        // After explosion effect (0.5s), add two mini objects and reset scale
+                        explosionTimeoutRef.current = setTimeout(() => {
+                            setMiniFloats((prev) => [
+                                ...prev,
+                                {
+                                    position: { x: position.x - 20, y: position.y - 20 },
+                                    velocity: { x: 1, y: 1 },
+                                },
+                                {
+                                    position: { x: position.x + 20, y: position.y + 20 },
+                                    velocity: { x: -1, y: -1 },
+                                },
+                            ]);
+                            setExploded(false);
+                            setScale(1);
+                        }, 1000);
+                    }
+                    return newScale;
+                });
+            }, 16); // ~60 fps
+        }, 500);
+    
 };
 
 const handleTouchMove = (e) => {
@@ -223,11 +268,6 @@ const handleTouchMove = (e) => {
         x: e.touches[0].clientX - offset.x,
         y: e.touches[0].clientY - offset.y,
     });
-};
-
-const handleTouchEnd = () => {
-    setIsDragging(false);
-    clearTimers();
 };
 
 // Utility function to clear timers
@@ -242,6 +282,13 @@ const clearTimers = () => {
         if (!exploded) setScale(1);
     }
 };
+
+
+const handleTouchEnd = () => {
+    setIsDragging(false);
+    clearTimers();
+};
+
 
 
     // Manage dragging event listeners
